@@ -14,7 +14,6 @@ enum LeftMenu: Int {
     case main = 0
     case swift
     case java
-    case go
     case nonMenu
 }
 
@@ -29,7 +28,6 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
     var mainViewController: UIViewController!
     var swiftViewController: UIViewController!
     var javaViewController: UIViewController!
-    var goViewController: UIViewController!
     var nonMenuViewController: UIViewController!
     var imageHeaderView: ImageHeaderView!
     
@@ -78,8 +76,6 @@ class LeftViewController : UIViewController, LeftMenuProtocol {
             self.slideMenuController()?.changeMainViewController(self.swiftViewController, close: true)
         case .java:
             self.slideMenuController()?.changeMainViewController(self.javaViewController, close: true)
-        case .go:
-            self.slideMenuController()?.changeMainViewController(self.goViewController, close: true)
         case .nonMenu:
             self.slideMenuController()?.changeMainViewController(self.nonMenuViewController, close: true)
         }
@@ -91,7 +87,7 @@ extension LeftViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .main, .swift, .java, .go, .nonMenu:
+            case .main, .swift, .java, .nonMenu:
                 return BaseTableViewCell.height()
             }
         }
@@ -121,7 +117,7 @@ extension LeftViewController : UITableViewDataSource {
         
         if let menu = LeftMenu(rawValue: indexPath.row) {
             switch menu {
-            case .main, .swift, .java, .go, .nonMenu:
+            case .main, .swift, .java, .nonMenu:
                 let cell = BaseTableViewCell(style: UITableViewCellStyle.subtitle, reuseIdentifier: BaseTableViewCell.identifier)
                 cell.setData(menus[indexPath.row])
                 return cell

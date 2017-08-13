@@ -21,9 +21,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E5U-WE-0xk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="E5U-WE-0xk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="rgT-Ky-ikO"/>
@@ -32,6 +31,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="E5U-WE-0xk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="UCl-bE-5cn"/>
+                            <constraint firstAttribute="trailing" secondItem="E5U-WE-0xk" secondAttribute="trailing" id="bIZ-Bz-QId"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="E5U-WE-0xk" secondAttribute="bottom" id="mLI-2c-yVV"/>
+                            <constraint firstItem="E5U-WE-0xk" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="tbE-mJ-84P"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableview" destination="E5U-WE-0xk" id="JdN-tz-c23"/>
@@ -57,7 +62,61 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4w2-Qb-TEW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="151" y="800"/>
+            <point key="canvasLocation" x="114" y="800"/>
+        </scene>
+        <!--Swift View Controller-->
+        <scene sceneID="WoT-go-Akl">
+            <objects>
+                <viewController storyboardIdentifier="SwiftViewController" id="JJd-Yw-VLe" customClass="SwiftViewController" customModule="QRCodeCapure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0XA-Ea-R1U"/>
+                        <viewControllerLayoutGuide type="bottom" id="MsH-yS-G9y"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Kin-HO-z8C">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cUf-Ce-ASO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="799" y="799"/>
+        </scene>
+        <!--Java View Controller-->
+        <scene sceneID="xfb-7n-GkV">
+            <objects>
+                <viewController storyboardIdentifier="JavaViewController" id="bJj-Ci-lIu" customClass="JavaViewController" customModule="QRCodeCapure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="wSw-V0-VDi"/>
+                        <viewControllerLayoutGuide type="bottom" id="y5W-Rc-BTu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="T0j-JL-UTi">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qtl-Ql-1Ia" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1501" y="795"/>
+        </scene>
+        <!--Non Menu Controller-->
+        <scene sceneID="JT8-HC-xSb">
+            <objects>
+                <viewController storyboardIdentifier="NonMenuController" id="FMb-jq-stW" customClass="NonMenuController" customModule="QRCodeCapure" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fff-oA-J8t"/>
+                        <viewControllerLayoutGuide type="bottom" id="VM9-0Z-QhJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SdS-Ze-m4B">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yje-SP-wy7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2245" y="791"/>
         </scene>
         <!--Left View Controller-->
         <scene sceneID="8ld-dj-m9z">
@@ -71,9 +130,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rVm-vb-U0Q">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rVm-vb-U0Q">
                                 <rect key="frame" x="0.0" y="145" width="375" height="522"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="fvm-BX-muL" id="Qo4-1f-QpC"/>
@@ -82,6 +140,12 @@
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" red="0.94509803920000002" green="0.97254901959999995" blue="0.91372549020000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="rVm-vb-U0Q" firstAttribute="leading" secondItem="NUv-iC-5Fb" secondAttribute="leading" id="3ug-Rd-UJc"/>
+                            <constraint firstItem="JBr-a0-emD" firstAttribute="top" secondItem="rVm-vb-U0Q" secondAttribute="bottom" id="7CY-8c-ePs"/>
+                            <constraint firstAttribute="trailing" secondItem="rVm-vb-U0Q" secondAttribute="trailing" id="Pdr-Rj-9b0"/>
+                            <constraint firstItem="rVm-vb-U0Q" firstAttribute="top" secondItem="GM0-xO-VW6" secondAttribute="bottom" constant="125" id="Z07-BX-lHp"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="tableView" destination="rVm-vb-U0Q" id="lmG-qh-Wf2"/>
